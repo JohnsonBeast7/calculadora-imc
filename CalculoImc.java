@@ -13,6 +13,11 @@ public class CalculoImc {
         System.out.println("Digite seu peso (kg): ");
         double peso = lerTeclado.nextDouble();
         
+        if(peso <= 0 || altura <= 0 || nome.isEmpty() || (genero != 'M' && genero != 'F' && genero != 'N')){
+            System.out.println("Digite um valor válido");
+            return; 
+        }
+        
         double resultadoCalculoImc = CalculoImc.calcularImc(peso, altura);
 
         String resultadoFinalImc = CalculoImc.classificarImc(genero, resultadoCalculoImc);
