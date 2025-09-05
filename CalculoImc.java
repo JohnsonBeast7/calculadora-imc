@@ -7,7 +7,7 @@ public class CalculoImc {
         System.out.println("Digite seu nome: ");
         String nome = lerTeclado.nextLine();
         System.out.println("Digite seu sexo (M, F ou N): ");
-        char genero = lerTeclado.next().charAt(0);
+        char genero = Character.toUpperCase(lerTeclado.next().charAt(0));
         System.out.println("Digite sua altura (metros): ");
         double altura = lerTeclado.nextDouble();
         System.out.println("Digite seu peso (kg): ");
